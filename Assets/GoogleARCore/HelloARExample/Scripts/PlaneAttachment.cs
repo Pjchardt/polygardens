@@ -43,7 +43,6 @@ namespace GoogleARCore.HelloAR
             m_meshRenderers = GetComponentsInChildren<MeshRenderer>();
         }
 
-#if !UNITY_EDITOR
         /// <summary>
         /// Unity update.
         /// </summary>
@@ -78,7 +77,6 @@ namespace GoogleARCore.HelloAR
             transform.position = new Vector3(transform.position.x, m_AttachedPlane.Position.y + m_planeYOffset,
                 transform.position.z);
         }
-#endif
 
         /// <summary>
         /// Have the GameObject maintain the y-offset to a plane.

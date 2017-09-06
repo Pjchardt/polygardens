@@ -101,8 +101,8 @@ namespace GoogleARCore.HelloAR
                 planeObject.GetComponent<TrackedPlaneVisualizer>().SetTrackedPlane(m_newPlanes[i]);
 
                 // Apply a random color and grid rotation.
-                //planeObject.GetComponent<Renderer>().material.SetColor("_GridColor", m_planeColors[Random.Range(0, //commented out to test dirt grid
-                //    m_planeColors.Length - 1)]);
+                planeObject.GetComponent<Renderer>().material.SetColor("_GridColor", m_planeColors[Random.Range(0,
+                    m_planeColors.Length - 1)]);
                 planeObject.GetComponent<Renderer>().material.SetFloat("_UvRotation", Random.Range(0.0f, 360.0f));
             }
 
@@ -129,7 +129,7 @@ namespace GoogleARCore.HelloAR
             TrackableHit hit;
             TrackableHitFlag raycastFilter = TrackableHitFlag.PlaneWithinBounds | TrackableHitFlag.PlaneWithinPolygon;
 
-            /*if (Session.Raycast(m_firstPersonCamera.ScreenPointToRay(touch.position), raycastFilter, out hit)) //Commented out for now
+            if (Session.Raycast(m_firstPersonCamera.ScreenPointToRay(touch.position), raycastFilter, out hit))
             {
                 // Create an anchor to allow ARCore to track the hitpoint as understanding of the physical
                 // world evolves.
@@ -148,7 +148,7 @@ namespace GoogleARCore.HelloAR
                 // Use a plane attachment component to maintain Andy's y-offset from the plane
                 // (occurs after anchor updates).
                 andyObject.GetComponent<PlaneAttachment>().Attach(hit.Plane);
-            }*/
+            }
         }
 
         /// <summary>

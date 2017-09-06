@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Name: DefaultSessionConfig
   m_EditorClassIdentifier: 
   m_enableARBackground: 1
-  m_enablePlaneFinding: 1
-  m_enablePointcloud: 0
+  m_synchronizeApplicationFramerateWithColorCamera: 0
