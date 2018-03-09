@@ -1,3 +1,4 @@
+![alt text](https://pjchardt.github.io/images/Polygardens.jpg)
 # polygardens
 AR demo with ARCore. Procedurally generate little gardens on surfaces.
 
